@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>Multiple checkbox</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>Multiple checkbox</h3>
+        </pre>
+        
+        <div class="wrapper">
+            <p>Select your favorite colors:</p>
+
+            <input type="checkbox" name="color" value="red"> Red
+            <input type="checkbox" name="color" value="green"> Green
+            <input type="checkbox" name="color" value="yellow"> Yellow
+            <input type="checkbox" name="color" value="black"> Black
+            <input type="checkbox" name="color" value="white"> White
+            <input type="checkbox" name="color" value="magento"> Magento
+            <input type="checkbox" name="color" value="blue"> Blue <br><br>
+            <button id="btn">Get Selected Colors</button>
+        </div>
+
+        <script>
+
+            function getSelectedCheckboxValues(name) {
+                const checkboxes = document.querySelectorAll( `input[name="${name}"]:checked` )
+
+                let values = []
+                checkboxes.forEach((checkbox) => {
+                    values.push(checkbox.value)
+                })
+
+                return values;
+            }
+
+            const btn = document.querySelector('#btn')
+
+            btn.addEventListener('click', (event) => {
+                alert(getSelectedCheckboxValues('color'))
+
+                // document.write(getSelectedCheckboxValues('color'))
+            })
+        </script>
+    </div>
+
+</body>
+</html>

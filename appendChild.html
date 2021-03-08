@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>appendChild</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>appendChild</h3>
+            function createMenuItem(name) {
+                let li = document.createElement('li')
+
+                li.textContent = name 
+
+                return li 
+            }
+
+            const menu = document.querySelector('#menu')
+
+            menu.appendChild(createMenuItem('Home'))
+            menu.appendChild(createMenuItem('Blog'))
+            menu.appendChild(createMenuItem('Products'))
+            menu.appendChild(createMenuItem('News'))
+            menu.appendChild(createMenuItem('Contact'))
+        </pre>
+        
+        <div class="wrapper">
+            <ul id="menu"></ul>
+        </div>
+
+        <script>
+            
+            function createMenuItem(name) {
+                let li = document.createElement('li')
+
+                li.textContent = name 
+
+                return li 
+            }
+
+            const menu = document.querySelector('#menu')
+
+            menu.appendChild(createMenuItem('Home'))
+            menu.appendChild(createMenuItem('Blog'))
+            menu.appendChild(createMenuItem('Products'))
+            menu.appendChild(createMenuItem('News'))
+            menu.appendChild(createMenuItem('Contact'))
+
+        </script>
+    </div>
+
+    <div>
+        <pre>
+            <h3>Moving first li from menu1 to menu2</h3>
+            <ul id="first">
+                <li>Item1.1</li>
+                <li>Item1.2</li>
+                <li>Item1.3</li>
+            </ul>
+            <ul id="second">
+                <li>Item2.1</li>
+                <li>Item2.2</li>
+                <li>Item2.3</li>
+            </ul>
+
+            const menu1 = document.querySelector('#menu1')
+            const item1 = menu1.firstElementChild
+
+            const menu2 = document.querySelector('#menu2')
+            menu2.appendChild(item1)
+
+        </pre>
+
+        <ul id="menu1">
+            <li>Item1.1</li>
+            <li>Item1.2</li>
+            <li>Item1.3</li>
+        </ul>
+        <ul id="menu2">
+            <li>Item2.1</li>
+            <li>Item2.2</li>
+            <li>Item2.3</li>
+        </ul>
+
+        <script>
+            const menu1 = document.querySelector('#menu1')
+            const item1 = menu1.firstElementChild
+
+            const menu2 = document.querySelector('#menu2')
+            menu2.appendChild(item1)
+        </script>
+        
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>Select Options</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>Select Options</h3>
+            const btn = document.querySelector('#btn')
+
+            const sb = document.querySelector('#framework')
+
+            btn.onclick = (event) => {
+                event.preventDefault()
+
+                // alert(sb.selectedIndex)
+                console.log(sb.selectedIndex)
+            }
+        </pre>
+        
+        <div class="wrapper">
+            <form>
+                <label for="framework">Select a JS Framework</label>
+                <br><br>
+                <select id="framework">
+                    <option value="Angular">Angular</option>
+                    <option value="React">React</option>
+                    <option value="Vue.js">Vue.js</option>
+                    <option value="Ember.js">Ember.js</option>
+                </select>
+                <br><br>
+                <button id="btn">Get the Selected Index</button>
+            </form>
+        </div>
+
+        <script>
+            const btn = document.querySelector('#btn')
+
+            const sb = document.querySelector('#framework')
+
+            btn.onclick = (event) => {
+                event.preventDefault()
+
+                // alert(sb.selectedIndex)
+                console.log(sb.selectedIndex)
+            }
+        </script>
+    </div>
+
+</body>
+</html>

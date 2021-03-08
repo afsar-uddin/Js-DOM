@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p> Using DocumentFragment for composing DOM Nodes/p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>DocumentFragment</h3>
+            let fragment = document.createDocumentFragment()
+
+            console.log(fragment)
+            
+            for(let i = 0; i < 10; i++) {
+                let p = document.createElement('p')
+                p.textContent = `Paragraph ${i}`
+
+                let result = fragment.appendChild(p)
+                div.appendChild(result)
+            }
+        </pre>
+        
+        <div class="wrapper">
+
+        </div>
+
+        <script>
+           
+            let div = document.querySelector('.wrapper')
+
+           /*
+
+            for(let i = 0; i<10; i++) {
+                let p = document.createElement('p')
+                p.textContent = `Paragraph ${i}`
+                div.appendChild(p)
+            }
+            */
+
+            let fragment = document.createDocumentFragment()
+
+            // console.log(fragment)
+            
+            for(let i = 0; i < 10; i++) {
+                let p = document.createElement('p')
+                p.textContent = `Paragraph ${i}`
+
+                let result = fragment.appendChild(p)
+                div.appendChild(result)
+            }
+
+        </script>
+    </div>
+    <div>
+        <pre>
+            <h3>Ex2: DocumentFragment</h3>
+        </pre>
+        <ul id="languageList"></ul>
+        <script>
+            let languages = ['English', 'Bangla', 'Hindi', 'Arabic', 'Spenish', 'Turkis']
+            let languageList = document.querySelector('#languageList')
+
+            let fragment2 = new DocumentFragment()
+
+            languages.forEach((language) => {
+                let li = document.createElement('li')
+                li.innerHTML = language 
+                fragment2.appendChild(li)
+            })
+
+            languageList.appendChild(fragment2)
+
+            // console.log(fragment2)
+
+        </script>
+    </div>
+
+</body>
+</html>

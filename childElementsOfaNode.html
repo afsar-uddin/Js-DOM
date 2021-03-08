@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>firstElementChild, lastElementChild, children</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>firstElementChild, lastElementChild, children</h3>
+
+            let menu = document.getElementById('menu')
+
+            let firstElementChild = menu.firstElementChild
+
+            let lastElementChild = menu.lastElementChild 
+            
+            let children = menu.children
+
+            console.log(firstElementChild)
+
+            console.log(lastElementChild)
+
+            console.log(children)
+        </pre>
+        
+        <div class="wrapper" id="wrapper">
+            <ul id="menu">
+            <li class="first">Home</li>
+            <li>Products</li>
+            <li class="current">Customer Support</li>
+            <li>Careers</li>
+            <li>Investors</li>
+            <li>News</li>
+            <li class="last">About Us</li>
+          </ul>
+          <article id="content"><h2>Heading</h2><p>First paragraph</p></article>
+        </div>
+
+        <script>
+           let menu = document.getElementById('menu')
+
+           let firstElementChild = menu.firstElementChild
+
+           let lastElementChild = menu.lastElementChild 
+           
+           let children = menu.children
+
+           console.log(firstElementChild)
+
+           console.log(lastElementChild)
+
+           console.log(children)
+
+           
+
+            
+        </script>
+    </div>
+
+</body>
+</html>

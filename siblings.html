@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>Siblings</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <div class="wrapper" id="wrapper">
+            <ul id="menu">
+                <li>Home</li>
+                <li>Products</li>
+                <li class="current">Customer Support</li>
+                <li>Careers</li>
+                <li>Investors</li>
+                <li>News</li>
+                <li>About Us</li>
+            </ul>
+        </div>
+
+        <pre>
+            <h3>Next Siblings</h3>
+            et current = document.querySelector('.current')
+
+            let nextSibling = current.nextElementSibling
+
+            console.log(nextSibling)
+        </pre>
+        
+        <script>
+            let current = document.querySelector('.current')
+
+            let nextSibling = current.nextElementSibling
+
+            console.log(nextSibling)
+        </script>
+
+        <pre>
+            <h3>Next all Siblings</h3>
+            let current2 = document.querySelector('.current')
+
+            let nextSibling2 = current2.nextElementSibling
+            
+            while(nextSibling2) {
+                
+                console.log(nextSibling2)
+
+                nextSibling2 = nextSibling2.nextElementSibling
+                
+            }
+        </pre>
+
+        <script>
+            let current2 = document.querySelector('.current')
+
+            let nextSibling2 = current2.nextElementSibling
+            
+            while(nextSibling2) {
+                
+                console.log(nextSibling2)
+
+                nextSibling2 = nextSibling2.nextElementSibling
+                
+            }
+        </script>
+
+    </div>
+
+</body>
+</html>

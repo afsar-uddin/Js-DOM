@@ -1,0 +1,54 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>insertBefore</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>insertBefore</h3>
+            <ul>
+                <li>Services</li>
+                <li>Products</li>
+                <li>Blog</li>
+            </ul>
+            let menu = document.getElementById('menu')
+
+            let li = document.createElement('li')
+            li.textContent = 'Home'
+
+            menu.insertBefore(li, menu.firstElementChild)
+        </pre>
+        
+        <div class="wrapper">
+            <ul id="menu">
+                <li>Services</li>
+                <li>Products</li>
+                <li>Blog</li>
+            </ul>
+        </div>
+        <!-- https://www.upwork.com/jobs/~019ac719ea833810f9 -->
+
+        <script>
+            let menu = document.getElementById('menu')
+
+            let li = document.createElement('li')
+            li.textContent = 'Home'
+
+            menu.insertBefore(li, menu.firstElementChild)
+        </script>
+    </div>
+
+</body>
+</html>

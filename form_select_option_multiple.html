@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>Select option multiple</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>Select option multiple</h3>
+            const btn = document.querySelector('#btn')
+            const sb = document.querySelector('#framework')
+
+            btn.onclick = (e) => {
+                e.preventDefault() 
+                const selectedValues = [].filter
+                .call(sb.options, option => option.selected)
+                .map(option => option.text)
+
+                console.log(selectedValues)
+            }
+        </pre>
+        
+        <div class="wrapper">
+            <div id="container">
+                <form>
+                    <label for="framework">Select one or more JS Frameworks:</label>
+                    <br><br>
+                    <select id="framework" multiple>
+                        <option value="1">Angular</option>
+                        <option value="2">React</option>
+                        <option value="3">Vue.js</option>
+                        <option value="4">Ember.js</option>
+                    </select>
+                    <br><br>
+                    <button id="btn">Get Selected Frameworks</button>
+                </form>
+            </div>
+        </div>
+
+        <script>
+            const btn = document.querySelector('#btn')
+            const sb = document.querySelector('#framework')
+
+            btn.onclick = (e) => {
+                e.preventDefault() 
+                const selectedValues = [].filter
+                .call(sb.options, option => option.selected)
+                .map(option => option.text)
+
+                console.log(selectedValues)
+            }
+        </script>
+    </div>
+
+</body>
+</html>

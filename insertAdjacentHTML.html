@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>insertAdjacentHTML</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>insertAdjacentHTML</h3>
+        </pre>
+        
+        <div class="wrapper">
+            <ul id="list">
+
+            </ul>
+        </div>
+
+        <script>
+            let list = document.querySelector('#list')
+            
+            list.insertAdjacentHTML('beforebegin', "<h2>Before Begin</h2>")
+            list.insertAdjacentHTML('afterbegin', "<li>After Begin</li>")
+            list.insertAdjacentHTML('beforeend', "<li>Before End</li>")
+            list.insertAdjacentHTML('afterend', "<h3>After End</h3>")
+        </script>
+    </div>
+
+</body>
+</html>

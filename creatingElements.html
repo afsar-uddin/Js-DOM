@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>createElement</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>createElement</h3>
+
+            let div = document.createElement('div')
+
+            div.innerHTML = '<p> Amar sonar bangla ami tumai valobashi...</p>'
+            
+            div.id = 'content'
+
+            div.className = 'note'
+
+            let txt = document.createTextNode('Some text from createElement Expample')
+
+            div.appendChild(txt)
+
+            let h2 = document.createElement('h2')
+            h2.textContent = 'Add h2 element to the div'
+            div.appendChild(h2)
+
+
+            document.body.appendChild(div)
+            
+            console.log(div)
+        </pre>
+
+        <script>
+            
+            let div = document.createElement('div')
+
+            div.innerHTML = '<p> Amar sonar bangla ami tumai valobashi...</p>'
+            
+            div.id = 'content'
+
+            div.className = 'note'
+
+            let txt = document.createTextNode('Some text from createElement Expample')
+
+            div.appendChild(txt)
+
+            let h2 = document.createElement('h2')
+            h2.textContent = 'Add h2 element to the div'
+            div.appendChild(h2)
+
+
+            document.body.appendChild(div)
+            
+            console.log(div)
+        </script>
+    </div>
+
+    <div class="wrapper">
+        <pre>
+            <h3>Creating new list items ( li)</h3>
+            
+            const menu = document.querySelector('#menu')
+            
+            let li = document.createElement('li')
+            li.textContent = 'Products'
+            menu.appendChild(li)
+
+            let li2 = document.createElement('li')
+            li2.textContent = 'About us'
+            menu.appendChild(li2)
+
+            console.log(menu)
+        </pre>
+        <ul id="menu">
+            <li>Default value</li>
+        </ul>
+
+        <script>
+
+            const menu = document.querySelector('#menu')
+            
+            let li = document.createElement('li')
+            li.textContent = 'Products'
+            menu.appendChild(li)
+
+            let li2 = document.createElement('li')
+            li2.textContent = 'About us'
+            menu.appendChild(li2)
+
+            console.log(menu)
+        </script>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>Form Radio</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>Form Radio</h3>
+            const btn = document.querySelector('#btn')
+            
+            btn.onclick = function() {
+                const radiobtns = document.querySelectorAll('input')
+                let selectedValue 
+                
+                for(const radiobtn of radiobtns) {
+                    if(radiobtn.checked) {
+                        selectedValue = radiobtn.value 
+                        break 
+                    }
+                }
+                console.log(selectedValue)
+            }
+        </pre>
+        
+        <div class="wrapper">
+            <form action="#">
+                <input type="radio" name="choice" value="yes"> Yes
+                <input type="radio" name="choice" value="no"> No <br><br>
+                <input type="button" id="btn" value="Show Selected Value">
+            </form>
+        </div>
+
+        <script>
+            const btn = document.querySelector('#btn')
+            
+            btn.onclick = function() {
+                const radiobtns = document.querySelectorAll('input')
+                let selectedValue 
+                
+                for(const radiobtn of radiobtns) {
+                    if(radiobtn.checked) {
+                        selectedValue = radiobtn.value 
+                        break 
+                    }
+                }
+                console.log(selectedValue)
+            }
+        </script>
+    </div>
+
+</body>
+</html>

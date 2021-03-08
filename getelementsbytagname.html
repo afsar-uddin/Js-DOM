@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>getElementsByTagName</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>getElementsByTagName</h3>
+        </pre>
+        <div class="wrapper">
+            <h1>JavaScript getElementsByTagName() Demo</h1>
+            <h2>First heading</h2>
+            <p>This is the first paragraph.</p>
+            <h2>Second heading</h2>
+            <p>This is the second paragraph.</p>
+            <h2>Third heading</h2>
+            <p>This is the third paragraph.</p>
+            <h2>First heading</h2>
+            <p>This is the first paragraph.</p>
+            <h2>Second heading</h2>
+            <p>This is the second paragraph.</p>
+            <h2>Third heading</h2>
+            <p>This is the third paragraph.</p>
+            <h2>First heading</h2>
+            <p>This is the first paragraph.</p>
+            <h2>Second heading</h2>
+            <p>This is the second paragraph.</p>
+            <h2>Third heading</h2>
+            <p>This is the third paragraph.</p>
+            <h2>First heading</h2>
+            <p>This is the first paragraph.</p>
+            <h2>Second heading</h2>
+            <p>This is the second paragraph.</p>
+            <h2>Third heading</h2>
+            <p>This is the third paragraph.</p>
+
+            <div class="output"></div>
+
+            <button id="btnCount" style="    padding: 5px;
+            text-decoration: none;
+            color: #313131;
+            background-color: #04d491;
+            border-radius: 2px;
+            margin: 3px;
+            display: block; cursor:pointer">Count P</button>
+        </div>
+        <script>
+            
+            let btn = document.getElementById('btnCount')
+            let output = document.querySelector('output')
+            console.log(output)
+            btn.addEventListener('click', () => {
+                let headingsP = document.getElementsByTagName('p')
+
+                alert(`The number of P Tags: ${headingsP.length}`)
+            })
+
+        </script>
+    </div>
+
+</body>
+</html>

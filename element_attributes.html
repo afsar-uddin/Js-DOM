@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>Element Attributes</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>Element Attributes</h3>
+            let input = document.querySelector('#inputsomething')
+
+            for(let attr of input.attributes) {
+                console.log(`${attr.name} = ${attr.value}`)
+            }
+        </pre>
+        
+        <div class="wrapper">
+            <input type="text" id="inputsomething" secure="true" required="true" placeholder="Write something">
+        </div>
+
+        <script>
+            let input = document.querySelector('#inputsomething')
+
+            for(let attr of input.attributes) {
+                console.log(`${attr.name} = ${attr.value}`)
+            }
+        </script>
+    </div>
+
+</body>
+</html>

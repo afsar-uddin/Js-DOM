@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>getElementsByClassName</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>getElementsByClassName()</h3>
+            
+            llet items = document.getElementsByClassName('item')
+
+            let data = [].map.call(items, item => item.textContent)
+
+            document.write("The output is: " + data)
+        </pre>
+        
+        <div id="app">
+            <header>
+                <nav>
+                    <ul id="menu">
+                        <li class="item">HTML</li>
+                        <li class="item">CSS</li>
+                        <li class="item highlight">JavaScript</li>
+                        <li class="item">TypeScript</li>
+                    </ul>
+                </nav>
+            </header>
+            </section>
+        </div>
+
+        <script>
+
+            let items = document.getElementsByClassName('item')
+
+            let data = [].map.call(items, item => item.textContent)
+
+            document.write("The output is: " + data)
+
+        </script>
+    </div>
+
+</body>
+</html>

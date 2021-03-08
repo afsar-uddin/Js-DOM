@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>Checked all</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>Checked All</h3>
+            
+            function check(checked = true) {
+                const cbs = document.querySelectorAll('input[name="color"]')
+                
+                cbs.forEach((cb) => {
+                    cb.checked = checked
+                })
+            }
+
+            const btn = document.querySelector('#btn')
+            btn.onclick = checkAll
+
+            function checkAll() {
+                check()
+                this.onclick = uncheckAll
+            }
+
+            function uncheckAll() {
+                check(false)
+
+                this.onclick = checkAll
+            }
+        </pre>
+        
+        <div class="wrapper">
+            <button id="btn">Check / uncheck All</button> <br><br>
+            <input type="checkbox" name="color" value="red"> Red
+            <input type="checkbox" name="color" value="green"> Green
+            <input type="checkbox" name="color" value="blue"> Blue
+            <input type="checkbox" name="color" value="black"> Black
+            <input type="checkbox" name="color" value="white"> White
+            <input type="checkbox" name="color" value="magento"> Magento
+        </div>
+
+        <script>
+            
+            function check(checked = true) {
+                const cbs = document.querySelectorAll('input[name="color"]')
+                
+                cbs.forEach((cb) => {
+                    cb.checked = checked
+                })
+            }
+
+            const btn = document.querySelector('#btn')
+            btn.onclick = checkAll
+
+            function checkAll() {
+                check()
+                this.onclick = uncheckAll
+            }
+
+            function uncheckAll() {
+                check(false)
+
+                this.onclick = checkAll
+            }
+
+        </script>
+    </div>
+
+</body>
+</html>

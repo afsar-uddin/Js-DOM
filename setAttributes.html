@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>Set Attributes</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>Set Attributes</h3>
+            let btnSend = document.querySelector('#btnSend')
+
+            if(btnSend) {
+                btnSend.setAttribute('name', 'send')
+                btnSend.setAttribute('disabled', '')
+            }
+        </pre>
+        
+        <div class="wrapper">
+            <button id="btnSend">Contact</button>
+        </div>
+
+        <script>
+            let btnSend = document.querySelector('#btnSend')
+
+            if(btnSend) {
+                btnSend.setAttribute('name', 'send')
+                btnSend.setAttribute('disabled', '')
+            }
+        </script>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Dom Basic</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 class="title">Javascript Dom Basic</h1>
+        <p>removeChild</p>
+        <div class="menu">
+            <ul>
+                <li><a href="index.html">Back To Home</a></li>
+            </ul>
+        </div>
+    </header>
+    <div>
+        <pre>
+            <h3>removeChild</h3>
+                <ul id="menu2">
+                    <li>Home</li>
+                    <li>Products</li>
+                    <li>About us </li>
+                    <li>Contact us</li>
+                </ul>
+        </pre>
+        
+        <div class="wrapper">
+            <ul id="menu">
+                <li>Home</li>
+                <li>Products</li>
+                <li>About us </li>
+                <li>Contact us</li>
+            </ul>
+        </div>
+
+        <script>
+            let menu = document.getElementById('menu')
+            menu.removeChild(menu.lastElementChild)
+        </script>
+
+        <pre>
+            <h3>All removeChild</h3>
+                <ul id="menu33">
+                    <li>Home</li>
+                    <li>Products</li>
+                    <li>About us </li>
+                    <li>Contact us</li>
+                </ul>
+        </pre>
+            <ul id="menu3">
+                <li>Home</li>
+                <li>Products</li>
+                <li>About us </li>
+                <li>Contact us</li>
+            </ul>
+        </pre>
+
+        <script>
+            let menu2 = document.getElementById('menu3')
+            menu2.innerHTML = ''
+            while(menu2.firstChild) {
+                menu2.removeChild(menu2.firstChild)
+            }
+        </script>
+
+    </div>
+
+</body>
+</html>
